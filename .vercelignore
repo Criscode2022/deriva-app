@@ -1,0 +1,14 @@
+node_modules
+apps/*/node_modules
+apps/*/dist
+.angular
+apps/web/.angular
+.turbo
+apps/*/.turbo
+coverage
+apps/*/coverage
+.git
+.env
+.env.local
+.env.*.local
+apps/web/src/environments/*.local.ts

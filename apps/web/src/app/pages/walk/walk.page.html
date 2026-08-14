@@ -1,0 +1,15 @@
+@if (walk.hasValue()) {
+  <article class="flex min-h-[calc(100vh-64px)] flex-col md:flex-row">
+    <img [src]="walk.value().image" [alt]="walk.value().title" class="h-72 w-full object-cover md:h-auto md:w-[48%]" />
+    <div class="flex flex-1 flex-col gap-4 p-8">
+      <p class="text-xs uppercase tracking-[0.16em] text-terracotta">{{ walk.value().barrio }}</p>
+      <h1 class="font-serif text-4xl">{{ walk.value().title }}</h1>
+      <p>{{ walk.value().duration_min }} min · {{ walk.value().seats }} plazas · {{ walk.value().meeting }}</p>
+      <div class="flex gap-3">
+        <a [routerLink]="['/walks', walk.value().slug, 'pedir']" class="bg-terracotta px-5 py-3 text-cream">Pedir plaza</a>
+        <a routerLink="/" class="border border-ink px-5 py-3">Volver al plano</a>
+      </div>
+      <p class="text-sm text-water">Esto es una solicitud. El guía confirma el aforo.</p>
+    </div>
+  </article>
+}

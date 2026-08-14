@@ -1,0 +1,19 @@
+<div class="min-h-screen bg-cream text-ink">
+  <header class="border-b border-ink/10">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a routerLink="/" class="font-serif text-xl tracking-tight">DERIVA</a>
+      <nav class="flex items-center gap-4 text-sm">
+        <a routerLink="/" class="hover:text-terracotta">Plano</a>
+        @if (auth.isAuthenticated()) {
+          <a routerLink="/inbox" class="hover:text-terracotta">Inbox</a>
+          <button type="button" (click)="auth.logout()">Salir</button>
+        } @else {
+          <a routerLink="/login">Guía</a>
+        }
+      </nav>
+    </div>
+  </header>
+  <main>
+    <router-outlet />
+  </main>
+</div>

@@ -1,0 +1,15 @@
+<section class="mx-auto max-w-4xl px-6 py-10">
+  <h1 class="font-serif text-3xl">Inbox</h1>
+  @if (requests.hasValue()) {
+    <div class="mt-6 flex flex-col gap-2">
+      @for (item of requests.value(); track item.id) {
+        <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-3">
+          <span class="w-24 text-xs text-terracotta">{{ item.status }}</span>
+          <span class="flex-1 text-sm">{{ item.code }} · {{ item.name }} · {{ item.walk_title }} · {{ item.party_size }} pax</span>
+          <button class="text-sm" (click)="setStatus(item.id, 'CONFIRMED')">Confirmar</button>
+          <button class="text-sm" (click)="setStatus(item.id, 'WAITLIST')">Waitlist</button>
+        </div>
+      }
+    </div>
+  }
+</section>

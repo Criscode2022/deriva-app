@@ -1,0 +1,29 @@
+{
+  "name": "deriva",
+  "version": "0.0.1",
+  "private": true,
+  "description": "DERIVA — mapa-first de paseos vecinales",
+  "packageManager": "pnpm@11.21.0",
+  "scripts": {
+    "dev": "turbo run start:dev --filter=@repo/api --filter=@repo/web --ui=stream",
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=@repo/web",
+    "build:api": "turbo run build --filter=@repo/api",
+    "start": "pnpm --filter @repo/web start",
+    "start:full": "turbo run start:dev --filter=@repo/api --filter=@repo/web --ui=stream",
+    "api": "pnpm --filter @repo/api start:dev",
+    "config": "pnpm --filter @repo/web run config",
+    "test": "turbo run test",
+    "test:ci": "turbo run test:ci --filter=@repo/web",
+    "test:api": "pnpm --filter @repo/api test:api",
+    "lint": "turbo run lint",
+    "lint:ci": "turbo run lint:ci --filter=@repo/web"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=11"
+  }
+}

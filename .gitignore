@@ -1,0 +1,75 @@
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+*.log
+log.txt
+
+/.sourcemaps
+/.versions
+/coverage
+
+# Compiled output
+/dist
+apps/*/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+apps/*/node_modules
+packages/*/node_modules
+npm-debug.log
+pnpm-debug.log*
+yarn-error.log
+
+# Turbo
+.turbo
+apps/*/.turbo
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular
+apps/web/.angular
+.sass-cache/
+/.nx
+/.nx/cache
+/connect.lock
+apps/*/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files with secrets
+.env
+.env.local
+.env.*.local
+apps/web/src/environments/environment.local.ts
+apps/web/src/environments/environment.prod.local.ts
+apps/web/src/environments/*.local.ts
+
+# Vercel
+.vercel
